@@ -1,0 +1,140 @@
+:root {
+    --base-clr: #11121a;
+    --line-clr: #42434a;
+    --hover-clr: #222533;
+    --text-clr: #e6e6ef;
+    --accent-clr: #5e63ff;
+    --secondry-text-clr: #b0b3c1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5rem;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to right, var(--base-clr), var(--line-clr));
+    display: grid;
+    color: var(--text-clr);
+    grid-template-columns: auto 1fr;
+}
+
+#sidebar {
+    box-sizing: border-box;
+    height: 100vh;
+    width: 250px;
+    padding: 5px 1em;
+    background-color: var(--base-clr);
+    border-right: 1px solid var(--line-clr);
+    transition: width 0.3s ease;
+}
+
+/* Position the toggle button */
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it’s on top of other elements */
+}
+
+/* Sidebar transition */
+#sidebar {
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+}
+
+#sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+
+#sidebar ul {
+    list-style: none;
+}
+
+#sidebar .logo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.drop-btn {
+    color: var(--text-clr);
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.drop-btn:hover {
+    background-color: var(--hover-clr);
+}
+
+.logo svg {
+    background-color: transparent;
+    display: inline;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: rgb(158, 49, 65);
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: var(--accent-clr);
+}
+
+/* Dropdown Menu Styling */
+ul.dropdown-profile,
+ul.dropdown-Accounts,
+ul.dropdown-Services,
+ul.dropdown-Setting {
+    display: none;
+    list-style: none;
+    padding-left: 1.5em;
+}
+
+.drop-btn:focus + .dropdown-profile,
+.drop-btn:focus + .dropdown-Accounts,
+.drop-btn:focus + .dropdown-Services,
+.drop-btn:focus + .dropdown-Setting {
+    display: block;
+    animation: slide-down 0.3s ease-out forwards;
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SVG Button Styling */
+.svg-btn {
+    color: #2944bc;
+    transition: color 0.3s;
+}
+
+.svg-btn:hover {
+    color: var(--accent-clr);
+}
