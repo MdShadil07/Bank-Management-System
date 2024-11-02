@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 html {
@@ -24,6 +25,8 @@ body {
     display: grid;
     color: var(--text-clr);
     grid-template-columns: auto 1fr;
+    
+    
 }
 
 #sidebar {
@@ -39,12 +42,14 @@ body {
 /* Position the toggle button */
 .toggle-btn {
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 5px;
+    right:182vh;
+    
+
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 1000; /* Ensure it’s on top of other elements */
+    z-index: 10; /* Ensure it’s on top of other elements */
 }
 
 /* Sidebar transition */
@@ -55,6 +60,11 @@ body {
 
 #sidebar.hidden {
     transform: translateX(-100%);
+    opacity: 1;
+}
+
+#sidebar.hidden + .toggle-btn{
+    display: block;
 }
 
 
@@ -116,6 +126,53 @@ ul.dropdown-Setting {
 .drop-btn:focus + .dropdown-Setting {
     display: block;
     animation: slide-down 0.3s ease-out forwards;
+}
+
+.main{
+    display: flex;
+    height: auto;
+    width: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    
+   
+}
+
+.container{
+    
+    background-image: url(Assest/Home.png);
+    background-size: cover;
+    background-position:center;
+}
+
+.card-profile{
+    background-color:var(--base-clr);
+    width: 400px;
+    height: 250px;
+    display: inline-block;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 1rem;
+}
+
+
+.Account{
+    background-color:var(--base-clr);
+    width: 400px;
+    height: 250px;
+    
+    display:flex;
+    flex-direction: column;
+    margin-top: 200px;
+    padding: 10px;
+    border-radius: 1rem;
+
+}
+.Account-card{
+    width: 400px;
+    height: 250px;
 }
 
 @keyframes slide-down {
