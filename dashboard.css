@@ -43,7 +43,7 @@ body {
 .toggle-btn {
     position: fixed;
     top: 5px;
-    right:182vh;
+    right:150vh;
     
 
     background: none;
@@ -136,6 +136,44 @@ ul.dropdown-Setting {
     flex-direction: column;
     
    
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    
+}
+
+header button{
+    display: flex;
+    height: 40px;
+    align-content:left;
+    margin: 10px 0px 0px 700px;
+}
+
+.head a{
+    text-decoration: none;
+    line-height: 2px;
+
+}
+
+
+.head h1{
+    color:rgb(28, 19, 19);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    margin-left: 40vh;
+    text-align: center;
+    justify-content:center;
+    text-decoration: none;
+    
+}
+
+.head p{
+    color: #fff;
+    text-align: center;
+    justify-content:center;
+    margin-left: 40vh;
 }
 
 .container{
