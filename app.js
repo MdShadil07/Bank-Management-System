@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 dropdownMenu.classList.remove("open");
             } else {
                 document.querySelectorAll(".dropdown-profile, .dropdown-Accounts, .dropdown-Services, .dropdown-Setting").forEach(menu => menu.classList.remove("open"));
-                dropdownMenu.classList.add("open");
+                dropdownMenu.classList.add("open");z
             }
         });
     });
