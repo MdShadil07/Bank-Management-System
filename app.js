@@ -8,6 +8,23 @@ document.addEventListener("DOMContentLoaded", function() {
         sidebar.classList.toggle("hidden");
     });
 
+
+    // adjust the position of toggle btn upon clicking 
+    toggleBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("closed");
+    
+        
+        if (sidebar.classList.contains("closed")) {
+            toggleBtn.style.left= "15px"; // Moves to far right
+        } else {
+            toggleBtn.style.left = "260px"; // Adjusted position when sidebar is open
+        }
+    });
+
+
+    // rotate the toggle buttom for better animation
+
+    
     // Toggle dropdown menus
     dropdownButtons.forEach(button => {
         button.addEventListener("click", function() {
